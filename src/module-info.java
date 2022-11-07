@@ -8,5 +8,7 @@ module javafx.jdbc {
     exports application;
     exports gui;
     opens gui to javafx.fxml;
+    opens model.entities to javafx.graphics, javafx.fxml, javafx.base;
 
+    opens model.services to javafx.graphics, javafx.fxml;
 }

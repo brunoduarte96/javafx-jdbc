@@ -19,28 +19,28 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
 
 
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
-               ScrollPane scrollPane = loader.load();
-               scrollPane.setFitToWidth(true);
-               scrollPane.setFitToHeight(true);
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+            ScrollPane scrollPane = loader.load();
+            scrollPane.setFitToWidth(true);
+            scrollPane.setFitToHeight(true);
 
 
-               mainScene = new Scene(scrollPane);
-                primaryStage.setScene(mainScene);
-                primaryStage.setTitle("Sample JavaFX application");
-                primaryStage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            mainScene = new Scene(scrollPane);
+            primaryStage.setScene(mainScene);
+            primaryStage.setTitle("Sample JavaFX application");
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
 
-    public static Scene getMainScene(){
+    public static Scene getMainScene() {
         return mainScene;
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         launch();
     }
 }
